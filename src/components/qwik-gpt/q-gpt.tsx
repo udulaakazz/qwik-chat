@@ -31,20 +31,3 @@ export const qwikGPT = server$(async function* (query: ChatMessage[]) {
     console.error(e);
   }
 });
-
-export function normalizeLine(line: string) {
-  line = line.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
-  line = line.toLowerCase();
-  line = line.replaceAll("`", "");
-  line = line.replaceAll("*", "");
-  line = line.replaceAll("_", " ");
-  line = line.replaceAll("#", "");
-  line = line.replaceAll("-", " ");
-  line = line.replaceAll("...", ".");
-  line = line.replaceAll(">", "");
-  line = line.replaceAll("<", "");
-  line = line.replaceAll("..", ".");
-  line = line.replaceAll("  ", " ");
-  line = line.trim();
-  return line;
-}
