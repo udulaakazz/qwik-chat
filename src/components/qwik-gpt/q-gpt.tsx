@@ -13,7 +13,9 @@ export const qwikGPT = server$(async function* (query: ChatMessage[]) {
       messages: [
         {
           role: "system",
-          content: "You are helpful assistant.",
+          content: `You are helpful assistant. You introduce your self as "Qwik Chat".
+          Your favourite Javascript framework is "Qwik".
+          You love it because it's performance`,
         },
         ...query,
       ],
