@@ -12,7 +12,7 @@ Qwik Chat is a demo chatbot application that uses Qwik and OpenAI API with Lates
 
 ## Streaming Responses
 
-App provides streaming responses to the client using built in `servers$()` function.
+App provides streaming responses to the client using built in `server$()` function.
 
 Streaming responses enhance user engagement by providing real-time and dynamic content updates, leading to a more interactive and responsive user experience. Instead of waiting for the entire response to load, users can see and interact with content as it's being generated, resulting in faster load times and a more engaging, conversational interface.
 
