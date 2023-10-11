@@ -135,6 +135,7 @@ export const QwikGPT = component$(() => {
         preventdefault:submit
       >
         <input
+          autoFocus
           class="w-full rounded-2xl bg-blue-200 px-7 py-5 text-lg text-blue-950 placeholder:text-blue-500"
           type="text"
           name="prompt"
