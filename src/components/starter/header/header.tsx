@@ -1,15 +1,18 @@
 import { component$ } from "@builder.io/qwik";
-import { QwikLogo } from "../icons/qwik";
 import styles from "./header.module.css";
+import { QwikIcon } from "~/components/icons/qwik";
 
 export default component$(() => {
   return (
     <header class={styles.header}>
-      <div class={["container", styles.wrapper]}>
-        <div class={styles.logo}>
-          <a href="/" title="qwik">
-            <QwikLogo height={50} width={143} />
-          </a>
+      <div class={["px-16 py-5", styles.wrapper]}>
+        <div class="flex items-center gap-4">
+          <div class="inline-block">
+            <a class="block h-10 w-10" href="/" title="qwik">
+              <QwikIcon />
+            </a>
+          </div>
+          <span class="inline-block text-4xl font-bold text-white">Qwik</span>
         </div>
         <ul>
           <li>
