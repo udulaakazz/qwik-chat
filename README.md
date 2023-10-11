@@ -1,4 +1,22 @@
-# Qwik City App ⚡️
+<p align="center"><img src="https://i.imgur.com/KF6fhEY.png" alt="project-image"></p>
+
+Qwik Chat is a demo chatbot application that uses Qwik and OpenAI API. The ChatBot fetches data on the server-side using `server$()` function and provides streaming responses to the client and ensures that the API key is not visible on the client side.
+
+## Setup
+
+1. Clone this repository
+2. Run `npm install`
+3. Create a new OpenAI API key at https://platform.openai.com/account/api-keys
+4. Rename `.env.example` to `.env.local` and add your OpenAI API key
+5. Start the application with `npm start`
+
+## Streaming Responses
+
+App provides streaming responses to the client using built in `servers$()` function.
+
+Streaming responses enhance user engagement by providing real-time and dynamic content updates, leading to a more interactive and responsive user experience. Instead of waiting for the entire response to load, users can see and interact with content as it's being generated, resulting in faster load times and a more engaging, conversational interface.
+
+## Qwik Resources
 
 - [Qwik Docs](https://qwik.builder.io/)
 - [Discord](https://qwik.builder.io/chat)
