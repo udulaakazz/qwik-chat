@@ -16,7 +16,7 @@ App provides streaming responses to the client using built in `servers$()` funct
 
 Streaming responses enhance user engagement by providing real-time and dynamic content updates, leading to a more interactive and responsive user experience. Instead of waiting for the entire response to load, users can see and interact with content as it's being generated, resulting in faster load times and a more engaging, conversational interface.
 
-## Streaming Responses
+## Follow-Up Questions
 
 You can ask follow-up questions from Qwik Chat.
 
