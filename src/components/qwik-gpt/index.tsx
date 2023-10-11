@@ -1,5 +1,12 @@
-import { $, component$, useSignal, useStore } from "@builder.io/qwik";
+import {
+  $,
+  component$,
+  useSignal,
+  useStore,
+  useStyles$,
+} from "@builder.io/qwik";
 import { qwikGPT } from "./q-gpt";
+import styles from "./qwik-gpt.css?inline";
 import type { ChatMessage } from "./streaming-gpt";
 
 type MessageStore = {
@@ -7,6 +14,7 @@ type MessageStore = {
 };
 
 export const QwikGPT = component$(() => {
+  useStyles$(styles);
   const message = useSignal("");
   const done = useSignal(false);
 
@@ -90,27 +98,38 @@ export const QwikGPT = component$(() => {
   return (
     <>
       {store.messages.map((message, index) =>
-        message.role === "assistant" && message.content != "" ? (
+        message.role === "assistant" ? (
           <div
             key={index}
             class="max-w-[65ch] self-start rounded-xl bg-blue-950 px-5 py-2 text-white"
           >
-            {/* Formatting the message */}
-            {message.content.split("\n").map((text, index) => {
-              if (text === "") {
-                return (
-                  <p key={index} class="">
-                    &nbsp;
-                  </p>
-                );
-              } else {
-                return (
-                  <p key={index} class="">
-                    {text}
-                  </p>
-                );
-              }
-            })}
+            {message.content === "" ? (
+              <div class="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            ) : (
+              <>
+                {/* Formatting the message */}
+                {message.content.split("\n").map((text, index) => {
+                  if (text === "") {
+                    return (
+                      <p key={index} class="">
+                        &nbsp;
+                      </p>
+                    );
+                  } else {
+                    return (
+                      <p key={index} class="">
+                        {text}
+                      </p>
+                    );
+                  }
+                })}
+              </>
+            )}
           </div>
         ) : (
           message.content != "" && (
