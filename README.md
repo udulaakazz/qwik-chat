@@ -1,6 +1,6 @@
 <p align="center"><img src="https://i.imgur.com/KF6fhEY.png" alt="project-image"></p>
 
-Qwik Chat is a demo chatbot application that uses Qwik and OpenAI API. The ChatBot fetches data on the server-side using `server$()` function and provides streaming responses to the client and ensures that the API key is not visible on the client side.
+Qwik Chat is a demo chatbot application that uses Qwik and OpenAI API with Latest ChatGPT Models. The ChatBot fetches data on the server-side using `server$()` function and provides streaming responses to the client and ensures that the API key is not visible on the client side.
 
 ## Setup
 
@@ -15,6 +15,10 @@ Qwik Chat is a demo chatbot application that uses Qwik and OpenAI API. The ChatB
 App provides streaming responses to the client using built in `servers$()` function.
 
 Streaming responses enhance user engagement by providing real-time and dynamic content updates, leading to a more interactive and responsive user experience. Instead of waiting for the entire response to load, users can see and interact with content as it's being generated, resulting in faster load times and a more engaging, conversational interface.
+
+## Streaming Responses
+
+You can ask follow-up questions from Qwik Chat.
 
 ## Qwik Resources
 
