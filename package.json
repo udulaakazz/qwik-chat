@@ -1,6 +1,6 @@
 {
-  "name": "my-qwik-basic-starter",
-  "description": "Demo App with Routing built-in (recommended)",
+  "name": "qwik-chat",
+  "description": "Chat with Qwik Chat",
   "engines": {
     "node": ">=15.0.0"
   },
